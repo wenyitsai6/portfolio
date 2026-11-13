@@ -232,11 +232,6 @@ home = f"""
           <span class="pill key">Miro</span><span class="pill">Framer</span>
           <span class="pill">Notion</span><span class="pill">Adobe Creative Suite</span>
         </div>
-
-        <span class="label">Certifications</span>
-        <div class="pills">
-          <span class="pill cert">Foundations of User Experience Design — Google</span>
-        </div>
       </div>
 
       <div class="xs-main">
