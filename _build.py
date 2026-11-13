@@ -90,7 +90,7 @@ def card(href, cover, fans, tags, h3, p, nums, soon=False, vid=None):
   <div class="blob">
     <svg viewBox="0 0 100 91.78" aria-hidden="true"><use href="#bp" class="blobfill"/></svg>
     <div class="stage">{cover_html}{vid_html}{fan_html}</div>
-    <div class="hint">{'In progress' if soon else 'Hover →'}</div>
+    {'<div class="hint">In progress</div>' if soon else ''}
   </div>
   <div>
     <div class="tagrow">{tag_html}</div>
@@ -149,8 +149,8 @@ home = f"""
       <i>a first-gen creative</i><i>a former barista</i>
       <i class="final">Product Designer &amp; UX Researcher</i>
     </div>
-    <p class="lede">a product designer &amp; researcher drawn to the voices behind the products
-      we use and the experiences that shape them.</p>
+    <p class="lede">Drawn to the voices behind the products we use and the experiences
+      that shape them.</p>
   </div>
 </header>
 
@@ -158,7 +158,6 @@ home = f"""
 
 <div class="wrap">
   <section id="work">
-    <div class="sec-head"><h2>Selected work</h2><span class="label">Hover to preview</span></div>
     {RVFB_CARD}
     {LOKO_CARD}
     {HINGE_CARD}
@@ -261,7 +260,7 @@ home = f"""
               recommendations ranked by how many users each issue affected.
               <a href="work-hinge.html">Case study →</a></p></div>
 
-          <div class="tl-item rv"><span class="label">2024 — 2025 · Service Design at UW</span>
+          <div class="tl-item rv"><span class="label">Mar 2026 — Jun 2026 · Service Design at UW</span>
             <h4>Product Design &amp; Project Lead</h4>
             <p>Loko — a collaboration platform for independent local businesses. Led product design
               and the team, ran café field studies and co-design sessions.</p>
