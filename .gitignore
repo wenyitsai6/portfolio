@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+._*
+
+# scratch / staging
+_to_delete/
+__pycache__/
+*.pyc
+
+# editor
+.vscode/
+.idea/

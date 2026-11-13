@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hinge Usability Study — Wenyi Tsai</title>
+<meta name="description" content="A usability study of Hinge's onboarding flow and dealbreaker filters.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@400;600;700&family=Baloo+2:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');
+try{var t=localStorage.getItem('wt-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs>
+  <path id="bp" d="M44.62 0.00 C41.23 1.27 37.90 4.50 35.23 7.63 C32.55 10.76 30.59 16.41 28.57 18.79 C26.55 21.17 26.55 20.97 23.09 21.92 C19.63 22.86 11.68 22.54 7.83 24.46 C3.98 26.39 1.30 30.30 0.00 33.46 C-1.30 36.63 -1.96 39.63 0.00 43.44 C1.96 47.26 9.43 53.26 11.74 56.36 C14.06 59.46 13.76 58.15 13.89 62.04 C14.02 65.92 12.07 75.51 12.52 79.65 C12.98 83.79 14.81 84.87 16.63 86.89 C18.46 88.91 20.68 90.97 23.48 91.78 C26.29 92.60 29.42 93.05 33.46 91.78 C37.51 90.51 43.87 85.23 47.75 84.15 C51.63 83.07 53.62 84.05 56.75 85.32 C59.88 86.59 63.21 90.70 66.54 91.78 C69.86 92.86 73.32 93.51 76.71 91.78 C80.10 90.05 85.32 86.37 86.89 81.41 C88.45 76.45 85.71 66.44 86.11 62.04 C86.50 57.63 86.92 58.06 89.24 54.99 C91.55 51.92 98.21 47.26 100.00 43.64 C101.79 40.02 101.60 36.59 100.00 33.27 C98.40 29.94 94.88 25.86 90.41 23.68 C85.94 21.49 78.41 23.78 73.19 20.16 C67.97 16.54 62.04 5.32 59.10 1.96 C56.16 -1.40 57.99 0.33 55.58 0.00 C53.16 -0.33 48.01 -1.27 44.62 0.00 Z"/>
+  <clipPath id="bc" clipPathUnits="objectBoundingBox">
+    <path d="M0.4462 0.0000 C0.4123 0.0139 0.3790 0.0490 0.3523 0.0832 C0.3255 0.1173 0.3059 0.1787 0.2857 0.2047 C0.2655 0.2306 0.2655 0.2285 0.2309 0.2388 C0.1963 0.2491 0.1168 0.2456 0.0783 0.2665 C0.0398 0.2875 0.0130 0.3301 0.0000 0.3646 C-0.0130 0.3991 -0.0196 0.4318 0.0000 0.4733 C0.0196 0.5149 0.0943 0.5803 0.1174 0.6141 C0.1406 0.6478 0.1376 0.6336 0.1389 0.6759 C0.1402 0.7182 0.1207 0.8227 0.1252 0.8678 C0.1298 0.9129 0.1481 0.9247 0.1663 0.9467 C0.1846 0.9687 0.2068 0.9911 0.2348 1.0000 C0.2629 1.0089 0.2942 1.0139 0.3346 1.0000 C0.3751 0.9861 0.4387 0.9286 0.4775 0.9168 C0.5163 0.9051 0.5362 0.9158 0.5675 0.9296 C0.5988 0.9435 0.6321 0.9883 0.6654 1.0000 C0.6986 1.0117 0.7332 1.0188 0.7671 1.0000 C0.8010 0.9812 0.8532 0.9410 0.8689 0.8870 C0.8845 0.8330 0.8571 0.7239 0.8611 0.6759 C0.8650 0.6279 0.8692 0.6326 0.8924 0.5991 C0.9155 0.5657 0.9821 0.5149 1.0000 0.4755 C1.0179 0.4360 1.0160 0.3987 1.0000 0.3625 C0.9840 0.3262 0.9488 0.2818 0.9041 0.2580 C0.8594 0.2342 0.7841 0.2591 0.7319 0.2196 C0.6797 0.1802 0.6204 0.0579 0.5910 0.0213 C0.5616 -0.0153 0.5799 0.0036 0.5558 0.0000 C0.5316 -0.0036 0.4801 -0.0139 0.4462 0.0000 Z"/>
+  </clipPath>
+</defs></svg>
+<nav class="nav">
+  <a class="brand" href="index.html">
+    <img src="img/wt-logo.png" alt="" width="34" height="31">
+    Wenyi Tsai
+  </a>
+  <button class="burger" aria-label="Menu">Menu</button>
+  <div class="nlinks">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="playground.html">Playground</a>
+    <a href="mailto:wenyitsai6@gmail.com" class="cta">Contact me</a>
+    <button class="tog" aria-label="Toggle dark mode">&#9790;</button>
+  </div>
+</nav>
+
+<div class="cs-hero">
+  <div class="wrap">
+    <span class="label">Usability study · HCDE 417 · Team of 5</span>
+    <h1>Ten people. One missing button.</h1>
+    <p class="lede">We ran think-aloud usability sessions on Hinge's new-user experience with ten
+      participants. Every single one of them hit the same wall — you cannot go back during
+      onboarding. It became the highest-priority fix in our report.</p>
+    <div class="facts">
+      <div class="fact"><span class="label">Role</span><b>UX Experience &amp; UX Researcher</b></div>
+      <div class="fact"><span class="label">Method</span><b>1:1 think-aloud usability testing</b></div>
+      <div class="fact"><span class="label">Participants</span><b>10 — 8 new, 2 lapsed</b></div>
+      <div class="fact"><span class="label">Year</span><b>2025</b></div>
+    </div>
+  </div>
+</div>
+
+<div class="narrow cs-body">
+  <section style="padding-top:44px">
+    <div class="figs rv">
+      <div class="fig"><b>10</b><span>Participants</span></div>
+      <div class="fig"><b>30–45</b><span>Minutes per session</span></div>
+      <div class="fig"><b>3</b><span>Core findings</span></div>
+      <div class="fig"><b>8</b><span>Ranked recommendations</span></div>
+    </div>
+
+    <h2>What we were asking</h2>
+    <p>Hinge markets itself as "designed to be deleted" — a dating app built for intentional
+      relationships. But getting to the app itself means answering 20+ demographic questions
+      first, covering everything from age to political and religious belief.</p>
+    <p>We evaluated two things: the new-user experience through onboarding, and whether people
+      could find and understand <strong>Dating Preferences</strong> and <strong>Dealbreakers</strong>
+      — the controls that shape who you see and who sees you.</p>
+
+    <h3>Who we tested with</h3>
+    <p>Ten participants aged 18–29, split into two groups: eight who had never used Hinge, and two
+      lapsed users inactive for six months or more. That split let us separate genuine first-run
+      confusion from habits formed by prior use.</p>
+
+    <h3>How we ran it</h3>
+    <p>Each session was moderated 1:1 over Zoom with phone screen-sharing, one moderator and at
+      least one notetaker. Participants thought aloud while completing tasks, then answered
+      follow-up interview questions. We scored each task against a shared success-criteria table —
+      from <em>Success</em> through <em>Delayed Success</em> to <em>Failed</em> — so results stayed
+      comparable across different moderators.</p>
+    <p>Afterwards we open-coded the recordings and migrated everything to Miro for affinity
+      diagramming: one sticky color per participant, ten categories, then grouped into themes.</p>
+
+    <h2>Finding 01 — Onboarding is long, rigid, and overwhelming</h2>
+    <p>This was the biggest section of the study and produced the most severe issues. Six separate
+      problems compound into one bad first impression.</p>
+
+    <h3>There is no back button. At all.</h3>
+    <p><strong>10 out of 10 participants</strong> were frustrated by this — the single most
+      universal finding in the study. Moving forward is effortless; going back is impossible. One
+      participant said it would make them consider deleting the app.</p>
+    <blockquote><p>You can't, like, go back and adjust your preferences as you're doing it
+      initially. You have to go through the whole onboarding and then adjust it later, which I
+      think is… a little goofy.</p><cite>P3</cite></blockquote>
+    <blockquote><p>There's no clear back path to adjust previous answers during onboarding. [This
+      feels] kinda annoying. I'm thinking negatively about that.</p><cite>P4</cite></blockquote>
+
+    <h3>Terminology people can't parse</h3>
+    <p>Five of nine participants hit words they didn't understand — and the app offered no
+      explanation. Two didn't know what <em>monogamy</em> and <em>non-monogamy</em> meant. Two
+      couldn't tell <em>life partner</em> from <em>long-term</em>. One skipped the gender identity
+      question entirely rather than answer something they didn't understand.</p>
+    <blockquote><p>I'm not entirely sure what these mean. I'm just gonna assume monogamy is, like,
+      two people in it… so maybe they should have the definition somewhere.</p><cite>P5</cite></blockquote>
+
+    <h3>Pop-ups fragment the flow</h3>
+    <p>Permissions, hints and Hinge+ upsells interrupt setup repeatedly. Participants understood
+      why they existed and still found them intrusive — one noted premium prompts appeared before
+      they'd had any chance to evaluate the free tier.</p>
+    <blockquote><p>I keep getting these pop-ups every two seconds. I'm gonna blow this app up,
+      bro… I get that they're necessary, but they break up the flow.</p><cite>P3</cite></blockquote>
+
+    <h3>Skipping is possible but invisible</h3>
+    <p>Two participants wanted to skip questions; only one worked out how. The skip control is so
+      low-contrast that P8 assumed it didn't exist and tapped at random until something worked.</p>
+    <blockquote><p>Oh, I can skip some questions, but it's not obvious that I can.</p><cite>P1</cite></blockquote>
+
+    <h2>Finding 02 — Dealbreakers are hard to find and harder to understand</h2>
+    <p>Dating Preferences and Dealbreakers are how you control your match pool. Both fail at the
+      first step: discovery.</p>
+    <ul>
+      <li>Every participant prompted to find Dating Preferences needed multiple attempts, wandering
+        between pages until they stumbled on it. The icon is small and gives no clue what it does.</li>
+      <li><strong>5 of 10</strong> could not easily locate Dealbreaker options — they're scattered
+        across individual preference categories rather than centralized anywhere.</li>
+      <li><strong>4 of 10</strong> didn't understand what a Dealbreaker <em>is</em>. One thought it
+        was a tiebreaker for choosing between similar profiles, rather than a filter that excludes
+        people.</li>
+      <li>Hinge does display "Dealbreakers will limit who you see and who sees you" — none of those
+        four noticed it.</li>
+    </ul>
+    <blockquote><p>The dating preference… finding that… I could find everything else but that.
+      It's kind of like a small icon on the top left. You would not think that's that.</p>
+      <cite>P6</cite></blockquote>
+    <blockquote><p>I don't know, that one says Dealbreaker, and nothing else says Dealbreaker,
+      so…</p><cite>P8</cite></blockquote>
+
+    <h2>Finding 03 — People can't tell what's free</h2>
+    <p>Participants weren't hostile to premium features. They were frustrated by not knowing where
+      the line was until they hit it.</p>
+    <ul>
+      <li><strong>7 of 10</strong> didn't realize how many features were premium-locked until they
+        ran into them mid-exploration.</li>
+      <li>Two discovered that preferences they'd set during <em>free</em> onboarding — like Dating
+        Intentions — couldn't be changed later without upgrading. The choice was made before anyone
+        said it was permanent.</li>
+      <li>One participant found the swipe limit only by exhausting it. No counter, no warning.</li>
+    </ul>
+    <blockquote><p>Nope, that takes Hinge+. Dating intentions, that takes Hinge+. Active today,
+      that takes Hinge+. Let me guess.</p><cite>P8</cite></blockquote>
+
+    <h2>What we recommended</h2>
+    <p>We ranked every fix by frequency and severity — how many participants hit it, and how badly
+      it blocked them. Prioritising by user count rather than engineering effort kept the
+      conversation on impact.</p>
+    <figure class="rv chart">
+  <table class="recs">
+    <caption>Recommendations ranked by how many of the ten participants each issue affected.</caption>
+    <thead><tr><th scope="col">Recommendation</th><th scope="col">Users affected</th>
+      <th scope="col">Usability impact</th></tr></thead>
+    <tbody><tr>
+      <th scope="row"><span class="pri high">High</span>Add a back button during onboarding</th>
+      <td class="bar-cell"><span class="track"><span class="bar" style="--w:100%"></span></span><b>10/10</b></td>
+      <td class="impact">Cannot recover from errors</td>
+    </tr><tr>
+      <th scope="row"><span class="pri medium">Medium</span>Improve Dating Preferences visibility</th>
+      <td class="bar-cell"><span class="track"><span class="bar" style="--w:70%"></span></span><b>7/10</b></td>
+      <td class="impact">Cannot find core features</td>
+    </tr><tr>
+      <th scope="row"><span class="pri medium">Medium</span>Clarify free vs. premium features upfront</th>
+      <td class="bar-cell"><span class="track"><span class="bar" style="--w:70%"></span></span><b>7/10</b></td>
+      <td class="impact">Lack of system status visibility</td>
+    </tr><tr>
+      <th scope="row"><span class="pri medium">Medium</span>Centralize Dealbreaker management</th>
+      <td class="bar-cell"><span class="track"><span class="bar" style="--w:50%"></span></span><b>5/10</b></td>
+      <td class="impact">Scattered options prevent discovery</td>
+    </tr><tr>
+      <th scope="row"><span class="pri medium">Medium</span>Add tooltips for unclear terminology</th>
+      <td class="bar-cell"><span class="track"><span class="bar" style="--w:50%"></span></span><b>5/10</b></td>
+      <td class="impact">Cannot make informed selections</td>
+    </tr><tr>
+      <th scope="row"><span class="pri medium">Medium</span>Reduce pop-up interruptions</th>
+      <td class="bar-cell"><span class="track"><span class="bar" style="--w:40%"></span></span><b>4/10</b></td>
+      <td class="impact">Disrupts task flow</td>
+    </tr><tr>
+      <th scope="row"><span class="pri high">High</span>Warn about locked settings during setup</th>
+      <td class="bar-cell"><span class="track"><span class="bar" style="--w:30%"></span></span><b>3/10</b></td>
+      <td class="impact">Unexpected system constraints</td>
+    </tr><tr>
+      <th scope="row"><span class="pri medium">Medium</span>Display a swipe-limit counter</th>
+      <td class="bar-cell"><span class="track"><span class="bar" style="--w:10%"></span></span><b>1/10</b></td>
+      <td class="impact">No warning before interruption</td>
+    </tr></tbody>
+  </table>
+</figure>
+    <p>The back button tops the list because it is the rare case where severity and reach line up
+      perfectly: it affected everyone, it blocks error recovery entirely, and it is a small,
+      well-understood piece of interface to add.</p>
+
+    <h2>What I'd do differently</h2>
+    <ul>
+      <li>We used convenience and snowball sampling — most participants had an existing connection
+        to someone on the team. That likely made people more comfortable than a stranger would
+        have been, and more generous in their feedback.</li>
+      <li>Eight new users to two lapsed users is lopsided. A more even split would have said more
+        about what brings someone back after six months away.</li>
+      <li>Everyone was 18–29. That's Hinge's core demographic, but it means we can say nothing
+        about how the same onboarding reads to someone older.</li>
+      <li>Two sessions were disrupted by genuine app bugs. Useful data about reliability, but it
+        cost us task time we'd planned for the dealbreaker section.</li>
+    </ul>
+
+    <div class="contact rv" style="margin-top:50px">
+      <h2>Next case study</h2>
+      <p>Two quarters of community research for a Seattle food bank — and the award that came
+        with it.</p>
+      <div class="cbtns">
+        <a class="btn" href="work-rvfb.html">Rainier Valley Food Bank →</a>
+        <a class="btn ghost" href="index.html#work">All work</a>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="wrap"><footer>
+  <span>© 2026 Wenyi Tsai — Product Designer &amp; UX Researcher</span>
+  <span><a href="mailto:wenyitsai6@gmail.com">wenyitsai6@gmail.com</a> · <a href="index.html#work">Work</a> · <a href="index.html#about">About</a></span>
+</footer></div>
+<img id="cur" src="img/wt-logo.png" alt="" aria-hidden="true">
+<script src="js/app.js"></script>
+</body>
+</html>
